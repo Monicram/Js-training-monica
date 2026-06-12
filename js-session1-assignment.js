@@ -23,7 +23,7 @@ console.log(typeof profile.isAvailable);
 console.log("3. Error during reassigning a const keyword");
 
 console.log(
-  "A const variable cannot be reassigned. Attempting to do so results in: TypeError: Assignment to constant variable."
+  "A const variable cannot be reassigned. It shows Syntaxerror while reassigning const variable."
 );
 
 console.log("Section 2 - Template Literals");
@@ -175,7 +175,7 @@ if (input === score) {
     console.log("match");
 }
 
-console.log(input === score); // false
+console.log(input === score); 
 
 const doubled = [1, 2, 3].map(n => {
     return n * 2;
