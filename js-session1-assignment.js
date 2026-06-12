@@ -22,9 +22,7 @@ console.log(typeof profile.isAvailable);
 
 console.log("3. Error during reassigning a const keyword");
 
-console.log(
-  "A const variable cannot be reassigned. It shows Syntaxerror while reassigning const variable."
-);
+console.log("A const variable cannot be reassigned. It shows Syntaxerror while reassigning const variable.");
 
 console.log("Section 2 - Template Literals");
 
@@ -68,24 +66,15 @@ const users = {
 
 console.log(users);
 
-const {
-    name: userName,
-    role: userRole,
-    active
-} = users;
+const {name: userName,role: userRole,active} = users;
 
 console.log(userName, userRole, active);
 
-const {
-    address: { city }
-} = users;
+const { address: { city }} = users;
 
 console.log(city);
 
-const updatedUser = {
-    ...users,
-    active: false
-};
+const updatedUser = {...users,active: false};
 
 console.log(updatedUser);
 
@@ -117,9 +106,7 @@ const users1 = [
     { id: 5, name: "Eve", role: "dev", active: false }
 ];
 
-const activeUsers = users1
-    .filter(u => u.active)
-    .map(u => u.name);
+const activeUsers = users1.filter(u => u.active).map(u => u.name);
 
 console.log(activeUsers);
 
@@ -127,42 +114,31 @@ const devUsers = users1.filter(u => u.role === "dev");
 
 console.log(devUsers);
 
-const userDetails = users1.map(
-    u => `${u.name} is a ${u.role}`
-);
+const userDetails = users1.map( u => `${u.name} is a ${u.role}`);
 
 console.log(userDetails);
 
-const activeDevs = users1
-    .filter(u => u.active && u.role === "dev")
-    .map(u => u.name);
+const activeDevs = users1.filter(u => u.active && u.role === "dev").map(u => u.name);
 
 console.log(activeDevs);
 
 console.log("Section 7 - Array Functions");
 
-const roleCount = users1.reduce((acc, user) => {
-    acc[user.role] = (acc[user.role] || 0) + 1;
+const roleCount = users1.reduce((acc, user) => {acc[user.role] = (acc[user.role] || 0) + 1;
     return acc;
 }, {});
 
 console.log(roleCount);
 
-const activeDesigner = users1.find(
-    u => u.active && u.role === "design"
-);
+const activeDesigner = users1.find(u => u.active && u.role === "design");
 
 console.log(activeDesigner);
 
-const hasInactiveUser = users1.some(
-    u => !u.active
-);
+const hasInactiveUser = users1.some( u => !u.active);
 
 console.log(hasInactiveUser);
 
-const allHaveRole = users1.every(
-    u => u.role
-);
+const allHaveRole = users1.every( u => u.role);
 
 console.log(allHaveRole);
 
